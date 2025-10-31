@@ -1,0 +1,192 @@
+.benefits-section {
+  background-color: #faf6ec;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+/* Title Button Style */
+.benefits-header {
+  margin-bottom: 50px;
+}
+
+.benefits-label {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid #000;
+  color: #d29a43;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+/* Grid Layout */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Card Styling */
+.benefit-card {
+  background-color: rgba(245, 240, 229, 1);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 320px;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+.benefit-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.benefit-card h3 {
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.benefit-card p {
+  color: #444;
+  font-size: 1rem;
+  padding: 0 15px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+
+/* Large Laptops and Desktops */
+@media (max-width: 1200px) {
+  .benefits-section {
+    padding: 70px 50px;
+  }
+
+  .benefit-card {
+    width: 300px;
+  }
+}
+
+/* Tablets Landscape / Medium Screens */
+@media (max-width: 992px) {
+  .benefits-section {
+    padding: 60px 40px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets Portrait / Large Phones */
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 50px 30px;
+  }
+
+  .benefits-header {
+    margin-bottom: 40px;
+  }
+
+  .benefits-label {
+    font-size: 1.1rem;
+    padding: 8px 20px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .benefit-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 576px) {
+  .benefits-section {
+    padding: 40px 20px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+
+  .benefit-img {
+    height: 180px;
+  }
+
+  .benefit-card h3 {
+    font-size: 1rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .benefits-label {
+    font-size: 1rem;
+    padding: 8px 18px;
+  }
+}
+
+/* Extra Small Screens (Below 400px) */
+@media (max-width: 400px) {
+  .benefits-section {
+    padding: 35px 15px;
+  }
+
+  .benefit-card {
+    padding-bottom: 15px;
+  }
+
+  .benefit-img {
+    height: 160px;
+  }
+
+  .benefit-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,30 @@
+.photo-page {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+.photo-page h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #a55413;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
