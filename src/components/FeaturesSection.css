@@ -18,7 +18,7 @@
 /* Individual Card */
 .feature-card {
   position: relative;
-  background-color: #fff9ec;
+  background-color: #ffdb70;
   border: 1px solid #f1e7d0;
   border-radius: 25px;
   width: 300px;
@@ -119,12 +119,12 @@
   .features-section {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
+    gap: 15px;
     padding: 50px 20px;
   }
 
   .feature-card {
-    width: 80%;
+    width: 70%;
     margin: 10px 0;
   }
 
@@ -147,16 +147,16 @@
   }
 
   .feature-card {
-    width: 100%;
-    padding: 22px;
+    width: 75%; /* ✅ reduced from 85% to 75% for perfect mobile fit */
+    padding: 20px;
   }
 
   .feature-number {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     top: -14px;
     right: -14px;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
   }
 
   .feature-title {
@@ -175,8 +175,8 @@
   }
 
   .feature-card {
-    width: 100%;
-    padding: 18px;
+    width: 90%; /* ✅ slightly smaller for very small screens */
+    padding: 15px;
   }
 
   .feature-title {

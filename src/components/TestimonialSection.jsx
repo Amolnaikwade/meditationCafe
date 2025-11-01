@@ -5,9 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // ✅ Import images from assets folder
-import user1 from "../assets/avatar1.jpg";
+import user1 from "../assets/cutomer.png";
 import user2 from "../assets/avatar2.jpg";
-import user3 from "../assets/avatar3.jpg";
+import user3 from "../assets/customer2.png";
 import user4 from "../assets/avatar3.jpg";
 
 const testimonials = [

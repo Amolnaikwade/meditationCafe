@@ -12,13 +12,18 @@ import logo from "../assets/logo.png"; // adjust path if needed
 
 export default function FooterSection() {
   return (
-    <footer className="footer">
-      <div className="footer-top">
-        <div className="footer-logo">
-          <img src={logo} alt="PureMind Logo" className="footer-logo-img" />
-          
-        </div>
-      </div>
+   <footer className="footer">
+  <div className="footer-top">
+    <div className="footer-logo">
+      <a 
+        href="https://www.meditationcafe.in" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <img src={logo} alt="PureMind Logo" className="footer-logo-img" />
+      </a>
+    </div>
+  </div>
 
       <hr className="divider" />
 
@@ -49,8 +54,7 @@ export default function FooterSection() {
 
         {/* ✅ Replaced Newsletter section with YouTube link */}
         <div className="footer-column">
-          <h3>Subscribe</h3>
-          <p>Subscribe for more information.</p>
+          
           <div className="footer-socials">
             <a
               href="https://www.youtube.com/@meditation_cafe"

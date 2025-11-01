@@ -27,7 +27,7 @@
 
 .pricing-card {
   background: #fff;
-  border: 1px solid #eee;
+  border: 1px solid #070000;
   border-radius: 12px;
   width: 320px;
   padding: 30px;
@@ -91,11 +91,11 @@
 }
 
 .included {
-  color: #4caf50;
+  color: #000;
 }
 
 .excluded {
-  color: #d9534f;
+  color: #000;
 }
 
 .purchase-btn {

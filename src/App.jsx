@@ -11,7 +11,7 @@ import TestimonialSection from "./components/TestimonialSection";
 import FooterSection from "./components/FooterSection";
 import PhotoPage from "./components/PhotoPage";
 import Navbar from "./components/Navbar";
-import BlogSection from "./components/BlogSection";
+//import BlogSection from "./components/BlogSection";
 function App() {
   return (
     <Router>
@@ -31,7 +31,7 @@ function App() {
                 <InstructorGallery />
                 <SubscriptionPlans />
                 <TestimonialSection />
-                <BlogSection />
+              
                 <FooterSection />
               </>
             }

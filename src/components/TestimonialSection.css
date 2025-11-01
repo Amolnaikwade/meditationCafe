@@ -35,6 +35,13 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   margin: 10px;
   transition: transform 0.3s ease;
+  height: 350px; /* 👈 Fixed height */
+   width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Keeps image and text aligned neatly */
+  overflow: hidden;
 }
 
 .testimonial-card:hover {
@@ -62,7 +69,14 @@
   color: #555;
   line-height: 1.6;
   font-style: italic;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* 👈 Limit text to 5 lines */
+  -webkit-box-orient: vertical;
 }
+
 
 /* Slick custom styling */
 .slick-dots li button:before {
@@ -71,9 +85,10 @@
 }
 
 @media (max-width: 768px) {
-  .testimonial-card {
-    width: 90%;
+ .testimonial-card {
+    width: 85%;
     margin: 0 auto;
+    height: 350px; /* 👈 same as desktop to keep consistent */
   }
 
   .testimonial-heading {

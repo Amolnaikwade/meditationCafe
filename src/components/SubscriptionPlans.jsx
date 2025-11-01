@@ -12,12 +12,12 @@ export default function SubscriptionPlans() {
       <div className="pricing-cards">
         {/* Basic Plan */}
         <div className="pricing-card">
-          <h3 className="plan-title">Basic</h3>
+          <h3 className="plan-title">प्रारम्भ · The Beginning</h3>
           <h2 className="plan-price">
-            Free<span>/3 days</span>
+            <span></span>
           </h2>
           <ul className="plan-features">
-            <li className="included">✔ 3 days</li>
+            <li className="included">✔ 4 days</li>
             <li className="included">✔ Relaxation Techniques</li>
             <li className="included">✔ Basic Meditative Pranayama</li>
             <li className="included">✔ Q&A Sessions</li>
@@ -31,8 +31,9 @@ export default function SubscriptionPlans() {
 
         {/* Intermediate Plan */}
         <div className="pricing-card popular">
-          <div className="popular-tag">Popular</div>
-          <h3 className="plan-title">Intermediate</h3>
+          
+          <h3 className="plan-title">साधना · The Practice
+</h3>
           <h2 className="plan-price">
             Rs 1500<span>/month</span>
           </h2>

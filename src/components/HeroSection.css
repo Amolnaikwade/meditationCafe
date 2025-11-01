@@ -277,3 +277,23 @@
 .hero-logo img:hover {
   transform: scale(1.05);
 }
+.heart-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.heart.filled {
+  color: red;
+}
+
+.heart {
+  color: lightgray;
+}
+
+.rating-text {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #555;
+}

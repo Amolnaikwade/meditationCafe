@@ -16,7 +16,13 @@
 .footer-logo {
   flex: 1;
   min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* ✅ Centers logo and text horizontally */
+  justify-content: center; /* ✅ Centers vertically */
+  text-align: center;  /* ✅ Makes text align under the logo */
 }
+
 
 .footer-logo .brand {
   font-size: 28px;

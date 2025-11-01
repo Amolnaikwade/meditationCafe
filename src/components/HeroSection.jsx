@@ -20,12 +20,13 @@ const HeroSection = () => {
       {/* ✅ Left Side Text Section */}
       <div className="hero-text">
         <h1 className="hero-heading">
-          Experience Peace in <br /> the Middle of the City
+         Find Stillness Amid <br /> the Noise
         </h1>
 
         <p className="hero-paragraph">
-          Guided group meditations, weekend workshops, <br />
-          and a space for inner clarity.
+          Experience the power of breath, sound,  <br />
+          and silence through guided and mantra meditations
+
         </p>
 
         {/* ✅ Button now opens WhatsApp */}
@@ -39,19 +40,21 @@ const HeroSection = () => {
           <img src={avatar2} alt="User 2" className="avatar overlap" />
           <img src={avatar3} alt="User 3" className="avatar overlap" />
           <span className="user-count">
-            4.8k regular practitioners / students
+            Loved by our regular meditation community
+
           </span>
         </div>
 
         {/* ⭐ Star Rating */}
-        <div className="star-rating">
-          <span className="star filled">★</span>
-          <span className="star filled">★</span>
-          <span className="star filled">★</span>
-          <span className="star filled">★</span>
-          <span className="star">★</span>
-          <span className="rating-text">4.0 / 5.0</span>
-        </div>
+        <div className="heart-rating">
+  <span className="heart filled">❤️</span>
+  <span className="heart filled">❤️</span>
+  <span className="heart filled">❤️</span>
+  <span className="heart filled">❤️</span>
+  <span className="heart">🤍</span>
+  <span className="rating-text">4.8 / 5.0 ratings</span>
+</div>
+
 
         {/* 🌈 Stripe Image */}
         <div className="stripe-wrapper">
