@@ -33,21 +33,7 @@
 }
 
 /* Number Badge */
-.feature-number {
-  position: absolute;
-  top: -18px;
-  right: -18px;
-  background: #ffffff;
-  color: #333;
-  font-weight: 600;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Icon */
 .feature-icon {

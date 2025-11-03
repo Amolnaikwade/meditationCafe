@@ -101,22 +101,65 @@
   margin-left: 12px;
 }
 
-/* ⭐ Star rating */
-.star-rating {
+.heart-rating {
   display: flex;
   align-items: center;
-  margin-top: 0.8rem;
-  font-size: 1.4rem;
+  gap: 5px;
+  font-size: 24px;
 }
 
-.star {
-  margin-right: 5px;
-  color: #ccc;
+.heart-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 24px;
 }
 
-.star.filled {
-  color: #cc5500;
+.heart {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
 }
+
+/* ❤️ Full hearts */
+.heart.filled {
+  color: red;
+}
+
+/* ❤️ Half heart — smooth 50/50 look */
+.heart.half-heart {
+  background: linear-gradient(to right, red 80%, lightgray 50% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart.full-hart {
+  background: linear-gradient(to right, red 100%, lightgray 50% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 📝 Rating text */
+.rating-text {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+.rating-text {
+  margin-left: 8px;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+}
+
+
+.rating-text {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
 
 .rating-text {
   margin-left: 8px;
@@ -274,8 +317,9 @@
   }
 
   .stripe-image {
-    width: 100%;
-    height: 50px;
+    width: 105%;   /* ✅ makes stripe image wider than container */
+    max-width: 600px; /* optional max cap */
+    height: 60px;
   }
 
   .user-count {

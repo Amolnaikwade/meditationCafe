@@ -45,15 +45,15 @@ const HeroSection = () => {
           </span>
         </div>
 
-        {/* ⭐ Star Rating */}
-        <div className="heart-rating">
-  <span className="heart filled">❤️</span>
-  <span className="heart filled">❤️</span>
-  <span className="heart filled">❤️</span>
-  <span className="heart filled">❤️</span>
-  <span className="heart">🤍</span>
+      <div className="heart-rating">
+  <span className="heart full-hart">❤️</span>
+  <span className="heart full-hart">❤️</span>
+  <span className="heart full-hart">❤️</span>
+  <span className="heart full-hart">❤️</span>
+  <span className="heart half-heart">❤️</span>
   <span className="rating-text">4.8 / 5.0 ratings</span>
 </div>
+
 
 
         {/* 🌈 Stripe Image */}
