@@ -75,7 +75,7 @@
 
 /* Image style */
 .hero-image {
-  height: 500px;
+  height: 550px;
   width: 500px;
   object-fit: cover;
   border-radius: 3rem;
@@ -164,7 +164,7 @@
   }
 
   .hero-image {
-    height: 420px;
+    height: 450px;
     width: 420px;
   }
 
