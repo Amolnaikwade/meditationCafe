@@ -26,7 +26,7 @@ const HeroSection = () => {
         <p className="hero-paragraph">
           A journey inward-through breath<br />
           sound, and silence
-
+           <br/>
         </p>
 
         {/* ✅ Button now opens WhatsApp */}
