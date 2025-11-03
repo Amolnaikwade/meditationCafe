@@ -20,12 +20,12 @@ const HeroSection = () => {
       {/* ✅ Left Side Text Section */}
       <div className="hero-text">
         <h1 className="hero-heading">
-         Find Stillness Amid <br /> the Noise
+         Find Stillness<br /> Amid  the Noise
         </h1>
 
         <p className="hero-paragraph">
-          Experience the power of breath, sound,  <br />
-          and silence through guided and mantra meditations
+          A journey inward-through breath<br />
+          sound, and silence
 
         </p>
 
