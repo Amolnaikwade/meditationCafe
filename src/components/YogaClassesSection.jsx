@@ -10,7 +10,7 @@ const YogaClassesSection = () => {
 
         {/* Heading + Button in Same Line */}
         <div className="yoga-heading-row">
-          <h2>Meditation Cafe offers following types fo meditation curriculum
+          <h2>Meditation Cafe offers following types of meditation curriculum
 </h2>
           
         </div>

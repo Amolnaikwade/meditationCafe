@@ -1,9 +1,9 @@
 import React from "react";
 import mainYoga from "../assets/yoga-main.jpg";
 import stripe from "../assets/image.png";
-import avatar1 from "../assets/cutomer.png";
-import avatar2 from "../assets/customer2.png";
-import avatar3 from "../assets/avatar3.jpg";
+import avatar1 from "../assets/avatar3.jpg";
+import avatar2 from "../assets/cutomer.png";
+import avatar3 from "../assets/customer2.png";
 import logo from "../assets/logo2.png";
 import "./HeroSection.css";
 
