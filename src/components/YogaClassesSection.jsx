@@ -36,7 +36,7 @@ const YogaClassesSection = () => {
 
         <div className="yoga-card card4">
           <div className="yoga-img"></div>
-          <div className="yoga-footer">Guided meditation by Guests </div>
+          <div className="yoga-footer">Guests Lecture</div>
         </div>
       </div>
     </section>
