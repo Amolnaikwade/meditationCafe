@@ -26,7 +26,7 @@ export default function SubscriptionPlans() {
             <li className="excluded">✖ Diet Plan</li>
             <li className="excluded">✖ Q&A with Senior Monks</li>
           </ul>
-          <button className="purchase-btn">Purchase Now</button>
+          <button className="purchase-btn">Join upcoming 3 Days Free Seasions</button>
         </div>
 
         {/* Intermediate Plan */}

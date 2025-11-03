@@ -8,16 +8,16 @@ const YogaClassesSection = () => {
         {/* Top Label */}
         <div className="yoga-label">Our Classes</div>
 
-        {/* Heading + Button in Same Line */}
+        {/* Heading */}
         <div className="yoga-heading-row">
-          <h2>Meditation Cafe offers following types of meditation curriculum
-</h2>
-          
+          <h2>
+            Meditation Cafe offers following types of meditation curriculum
+          </h2>
         </div>
       </div>
 
+      {/* Grid of Yoga Cards */}
       <div className="yoga-grid">
-        {/* Top Row */}
         <div className="yoga-card card1">
           <div className="yoga-img"></div>
           <div className="yoga-footer">Breath Based Meditations</div>
@@ -28,7 +28,6 @@ const YogaClassesSection = () => {
           <div className="yoga-footer">Mantra Meditations</div>
         </div>
 
-        {/* Bottom Row */}
         <div className="yoga-card card3">
           <div className="yoga-img"></div>
           <div className="yoga-footer">From Movement to Stillness</div>

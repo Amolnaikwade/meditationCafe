@@ -1,14 +1,10 @@
 .gallery-section {
-  background-color: #f6f4ee; /* Same as HeroSection */
-  padding: 80px 80px;
+  background-color: #f6f4ee;
+  padding: 80px 0;
+  text-align: center;
 }
 
-/* Header Section */
 .gallery-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -18,117 +14,117 @@
   padding: 8px 18px;
   border-radius: 25px;
   font-weight: 600;
-  background-color: transparent;
-  margin-right: auto;
   font-size: 1.1rem;
+  background-color: transparent;
 }
 
-.gallery-heading {
-  flex: 1;
-  text-align: center;
-  color: #000;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0;
+/* Center slider container */
+.gallery-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.view-btn {
-  background-color: #d29a43;
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.gallery-slider {
+  width: 90%;
+  max-width: 650px; /* Increased width for a balanced layout */
 }
 
-.view-btn:hover {
-  background-color: #b7822e;
+/* Each Slide */
+.gallery-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
-/* Grid Layout */
-.gallery-grid {
-  display: grid;
-  grid-template-areas:
-    "big small1 small2"
-    "big small3 small4";
-  grid-template-columns: 1.2fr 0.6fr 0.6fr;
-  gap: 20px;
-  align-items: stretch;
-}
-
-.gallery-item img {
+.gallery-slide img {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  height: 420px; /* Increased height for better image visibility */
+  object-fit: contain; /* ensures full image fits inside */
+  border-radius: 12px;
+  background-color: #fff;
+  border: 2px solid #e6d8b6;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* Assign Grid Areas */
-.gallery-item.big {
-  grid-area: big;
-  height: 520px;
+/* --- Custom Arrows --- */
+.slick-prev,
+.slick-next {
+  width: 45px;
+  height: 45px;
+  z-index: 2;
 }
 
-.gallery-item.small:nth-child(2) {
-  grid-area: small1;
-}
-.gallery-item.small:nth-child(3) {
-  grid-area: small2;
-}
-.gallery-item.small:nth-child(4) {
-  grid-area: small3;
-}
-.gallery-item.small:nth-child(5) {
-  grid-area: small4;
+.slick-prev:before,
+.slick-next:before {
+  color: white;
+  font-size: 24px;
+  background-color: #d29a43;
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.gallery-item.small {
-  height: 250px;
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  background-color: #b7822e;
+  transform: scale(1.1);
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .gallery-grid {
-    grid-template-areas:
-      "big big"
-      "small1 small2"
-      "small3 small4";
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery-item.big {
-    height: 400px;
-  }
+/* Position Arrows Closer */
+.slick-prev {
+  left: -55px;
+}
+.slick-next {
+  right: -55px;
 }
 
+/* Dots Styling */
+.slick-dots li button:before {
+  color: #d29a43;
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #b7822e;
+  opacity: 1;
+}
+
+/* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-areas:
-      "big"
-      "small1"
-      "small2"
-      "small3"
-      "small4";
-    grid-template-columns: 1fr;
+  .gallery-slider {
+    max-width: 90%;
   }
 
-  .gallery-item.big {
-    height: 300px;
+  .gallery-slide img {
+    height: 320px; /* slightly smaller for phones */
   }
 
-  .gallery-item.small {
-    height: 220px;
+  .slick-prev {
+    left: -30px;
+  }
+  .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-slide img {
+    height: 260px;
   }
 
-  .gallery-top {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
+  .slick-prev,
+  .slick-next {
+    width: 35px;
+    height: 35px;
   }
 
-  .view-btn {
-    margin-top: 10px;
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 20px;
+    padding: 8px;
   }
 }

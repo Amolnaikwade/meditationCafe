@@ -28,18 +28,18 @@ const BenefitsSection = () => {
     },
     {
       img: yoga4,
-      title: " More Positive Affect",
-      desc: "Ability to feel more positive emotions, gratitude, hope, etc., even in day-to-day life.",
+      title: " Faster Recovery from Stress",
+      desc: "After facing stressful events or emotional upsets, meditators return to calm and baseline mood faster",
     },
     {
       img: yoga5,
-      title: "Better attention / focus",
-      desc: " improvements even after short sessions (e.g. 30–40 min) in tasks that test alertness or vigilance.",
+      title: "More Positive Affect",
+      desc: " Ability to feel more positive emotions, gratitude, hope, etc., even in day-to-day life.",
     },
     {
       img: yoga6,
-      title: "Faster Recovery from Stress",
-      desc: "After facing stressful events or emotional upsets, meditators return to calm and baseline mood faster.",
+      title: "Mind Body Harmony",
+      desc: "Foster Mind Body balance for inner peace & wellness",
     },
   ];
 

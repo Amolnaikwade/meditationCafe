@@ -183,6 +183,10 @@
   height: auto;
   margin-bottom: 10px;
   object-fit: contain;
-
+  border-radius: 15px; /* ✅ rounded corners */
+  border: 2px solid #f9c74f; /* ✅ subtle golden border */
+  padding: 4px; /* optional: adds a little space around the logo */
+  background-color: #fff; /* optional: makes border more visible */
 }
+
 

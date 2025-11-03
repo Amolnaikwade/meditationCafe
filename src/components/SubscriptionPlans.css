@@ -26,8 +26,8 @@
 }
 
 .pricing-card {
-  background: #fff;
-  border: 1px solid #070000;
+  background: #fff4df;
+  border: 1px solid #d29a43;
   border-radius: 12px;
   width: 320px;
   padding: 30px;
@@ -99,7 +99,8 @@
 }
 
 .purchase-btn {
-  background: #fff;
+  background: #d29a43;
+  color: #fff;
   border: 1px solid #ccc;
   padding: 10px 20px;
   font-size: 16px;

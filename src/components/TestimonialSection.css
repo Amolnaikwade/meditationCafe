@@ -24,24 +24,23 @@
 }
 
 .testimonial-slider {
-  max-width: 1000px;
+  max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
 
 .testimonial-card {
   background: #fff;
   border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  margin: 10px;
-  transition: transform 0.3s ease;
-  height: 350px; /* 👈 Fixed height */
-   width: 270px;
+  padding: 30px 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Keeps image and text aligned neatly */
+  cursor: pointer;
   overflow: hidden;
+  height: 420px; /* 👈 Increased for better look */
 }
 
 .testimonial-card:hover {
@@ -49,19 +48,20 @@
 }
 
 .testimonial-image {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 15px;
+  object-fit: contain; /* 👈 ensures image not cropped */
+  margin-bottom: 15px;
   border: 3px solid #d29a43;
+  background-color: #fff;
 }
 
 .testimonial-name {
   font-size: 18px;
-  color: #000;
   font-weight: 600;
-  margin-bottom: 10px;
+  color: #000;
+  margin-bottom: 12px;
 }
 
 .testimonial-feedback {
@@ -73,25 +73,73 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* 👈 Limit text to 5 lines */
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
 }
 
+/* 👇 When clicked (on mobile), expand feedback */
+.testimonial-card.expanded .testimonial-feedback {
+  -webkit-line-clamp: unset;
+  max-height: none;
+}
 
-/* Slick custom styling */
+/* Arrows styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: #d29a43;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background: #b88234;
+}
+
+.arrow.prev {
+  left: -50px;
+}
+
+.arrow.next {
+  right: -50px;
+}
+
+/* Dots color */
 .slick-dots li button:before {
   color: #d29a43 !important;
   font-size: 10px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
- .testimonial-card {
-    width: 85%;
-    margin: 0 auto;
-    height: 350px; /* 👈 same as desktop to keep consistent */
+  .testimonial-slider {
+    max-width: 90%;
   }
 
-  .testimonial-heading {
-    font-size: 26px;
+  .arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .arrow.prev {
+    left: -25px;
+  }
+
+  .arrow.next {
+    right: -25px;
+  }
+
+  .testimonial-card {
+    height: auto;
   }
 }

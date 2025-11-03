@@ -23,37 +23,20 @@
   font-weight: 500;
 }
 
-.yoga-header h2 {
-  flex: 1;
+.yoga-heading-row h2 {
   font-size: 28px;
   font-weight: 600;
   color: #fff8f0;
   margin: 10px 20px;
 }
 
-.view-btn {
-  background-color: #f7c04a;
-  border: none;
-  color: #5c3300;
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.view-btn:hover {
-  background-color: #ffffff;
-  color: #a55413;
-}
-
-/* Grid Layout - 2 per row */
+/* Grid Layout */
 .yoga-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 25px;
+  gap: 25px;
   justify-items: center;
-  align-items: center;
+  align-items: start;
 }
 
 /* Card Styles */
@@ -61,27 +44,50 @@
   background-color: #f6c44d;
   border-radius: 20px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease;
   width: 100%;
   max-width: 420px;
+  transition: transform 0.3s ease;
 }
 
 .yoga-card:hover {
   transform: translateY(-5px);
 }
 
-/* Image area */
+/* Default Image Area */
 .yoga-img {
-  background-size: cover;
-  background-position: center;
   width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   border-bottom: 2px solid #e5b73b;
+  background-color: #f6c44d;
+  aspect-ratio: 4 / 3; /* default shape */
 }
 
-/* Footer Text */
+/* 🧘‍♀️ Adjusted for first two cards (fit image naturally) */
+.card1 .yoga-img {
+  background-image: url("/vinyasa.jpg");
+  aspect-ratio: 3/4; /* wide */
+}
+
+.card2 .yoga-img {
+  background-image: url("/ashtanga.jpg");
+  aspect-ratio: 3 / 4; /* tall */
+}
+
+/* Remaining cards (normal) */
+.card3 .yoga-img {
+  background-image: url("/power.jpg");
+  aspect-ratio: 16 / 9;
+}
+
+.card4 .yoga-img {
+  background-image: url("/hatha.jpg");
+  aspect-ratio: 15 /10;
+}
+
+/* Footer */
 .yoga-footer {
   background-color: #f6c44d;
   text-align: center;
@@ -91,41 +97,15 @@
   font-size: 16px;
 }
 
-/* Different sizes */
-.card1 .yoga-img {
-  height: 320px;
-  background-image: url("/vinyasa.jpg");
-}
-.card2 .yoga-img {
-  height: 250px;
-  background-image: url("/ashtanga.jpg");
-}
-.card3 .yoga-img {
-  height: 230px;
-  background-image: url("/power.jpg");
-}
-.card4 .yoga-img {
-  height: 340px;
-  background-image: url("/hatha.jpg");
-}
-
-/* Subtle staggered layout */
-.card1 {
-  transform: translateY(5px);
-}
-.card2 {
-  transform: translateY(-10px);
-}
-.card3 {
-  transform: translateY(-5px);
-}
-.card4 {
-  transform: translateY(8px);
-}
+/* Stagger Effect */
+.card1 { transform: translateY(5px); }
+.card2 { transform: translateY(-10px); }
+.card3 { transform: translateY(-5px); }
+.card4 { transform: translateY(8px); }
 
 /* -------------------- RESPONSIVE DESIGN -------------------- */
 
-/* Tablets and below */
+/* Tablets */
 @media (max-width: 992px) {
   .yoga-section {
     padding: 60px 50px;
@@ -136,52 +116,28 @@
     gap: 30px;
   }
 
-  .yoga-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .yoga-header h2 {
+  .yoga-heading-row h2 {
     font-size: 26px;
-    margin: 10px 0;
-  }
-
-  .view-btn {
-    align-self: flex-start;
+    text-align: left;
   }
 }
 
-/* Tablets Portrait / Large Phones */
+/* Large Phones */
 @media (max-width: 768px) {
   .yoga-section {
     padding: 50px 30px;
   }
 
-  .yoga-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .yoga-header h2 {
+  .yoga-heading-row h2 {
     font-size: 24px;
-  }
-
-  .yoga-label {
-    font-size: 1rem;
-    padding: 8px 20px;
-  }
-
-  .view-btn {
-    font-size: 0.95rem;
-    padding: 8px 20px;
-  }
-
-  .yoga-card {
-    max-width: 100%;
   }
 
   .yoga-footer {
     font-size: 15px;
+  }
+
+  .yoga-img {
+    aspect-ratio: 16 / 10;
   }
 }
 
@@ -191,23 +147,9 @@
     padding: 40px 20px;
   }
 
-  .yoga-header {
-    align-items: center;
-    text-align: center;
-  }
-
-  .yoga-header h2 {
+  .yoga-heading-row h2 {
     font-size: 20px;
-    margin: 10px 0;
-  }
-
-  .view-btn {
-    padding: 8px 18px;
-    font-size: 0.9rem;
-  }
-
-  .yoga-label {
-    font-size: 0.9rem;
+    text-align: center;
   }
 
   .yoga-grid {
@@ -216,40 +158,28 @@
 
   .yoga-footer {
     font-size: 14px;
-    padding: 12px;
   }
 
-  .card1 .yoga-img,
-  .card2 .yoga-img,
-  .card3 .yoga-img,
-  .card4 .yoga-img {
-    height: 200px;
+  .yoga-img {
+    aspect-ratio: 1 / 1;
   }
 }
 
-/* Extra Small Screens (Below 400px) */
+/* Extra Small */
 @media (max-width: 400px) {
   .yoga-section {
     padding: 35px 15px;
   }
 
-  .yoga-header h2 {
+  .yoga-heading-row h2 {
     font-size: 18px;
-  }
-
-  .view-btn {
-    padding: 8px 16px;
-    font-size: 0.85rem;
   }
 
   .yoga-footer {
     font-size: 13px;
   }
 
-  .card1 .yoga-img,
-  .card2 .yoga-img,
-  .card3 .yoga-img,
-  .card4 .yoga-img {
-    height: 180px;
+  .yoga-img {
+    aspect-ratio: 1 / 1;
   }
 }
