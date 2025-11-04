@@ -21,6 +21,7 @@ export default function InstructorGallery() {
     autoplaySpeed: 3000,
     arrows: true,
     pauseOnHover: true,
+    adaptiveHeight: true,
   };
 
   return (
@@ -33,7 +34,9 @@ export default function InstructorGallery() {
         <Slider {...settings} className="gallery-slider">
           {images.map((img, index) => (
             <div key={index} className="gallery-slide">
-              <img src={img} alt={`Yoga ${index + 1}`} />
+              <div className="yoga">
+                <img src={img} alt={`Yoga ${index + 1}`} />
+              </div>
             </div>
           ))}
         </Slider>

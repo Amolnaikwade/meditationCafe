@@ -41,7 +41,7 @@
 
 /* Card Styles */
 .yoga-card {
-  background-color: #f6c44d;
+ 
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
@@ -62,18 +62,20 @@
   background-size: contain;
   border-bottom: 2px solid #e5b73b;
   background-color: #f6c44d;
-  aspect-ratio: 4 / 3; /* default shape */
+  aspect-ratio: 4 / 3;
 }
 
-/* 🧘‍♀️ Adjusted for first two cards (fit image naturally) */
+/* 🧘‍♀️ Adjusted for first two cards (reduced height without cropping) */
 .card1 .yoga-img {
   background-image: url("/vinyasa.jpg");
-  aspect-ratio: 3/4; /* wide */
+  aspect-ratio: 11/ 7.9; /* shorter but full image visible */
+  background-size: contain;
 }
 
 .card2 .yoga-img {
   background-image: url("/ashtanga.jpg");
-  aspect-ratio: 3 / 4; /* tall */
+  aspect-ratio: 4 / 2.4; /* shorter but full image visible */
+  background-size: contain;
 }
 
 /* Remaining cards (normal) */
@@ -84,7 +86,7 @@
 
 .card4 .yoga-img {
   background-image: url("/hatha.jpg");
-  aspect-ratio: 15 /10;
+  aspect-ratio: 15 / 10;
 }
 
 /* Footer */
@@ -98,10 +100,18 @@
 }
 
 /* Stagger Effect */
-.card1 { transform: translateY(5px); }
-.card2 { transform: translateY(-10px); }
-.card3 { transform: translateY(-5px); }
-.card4 { transform: translateY(8px); }
+.card1 {
+  transform: translateY(5px);
+}
+.card2 {
+  transform: translateY(-10px);
+}
+.card3 {
+  transform: translateY(-5px);
+}
+.card4 {
+  transform: translateY(8px);
+}
 
 /* -------------------- RESPONSIVE DESIGN -------------------- */
 

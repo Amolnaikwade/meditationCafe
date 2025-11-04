@@ -23,9 +23,7 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Menu (mobile) */}
-        <div className="menu-icon" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
+       
       </div>
     </nav>
   );

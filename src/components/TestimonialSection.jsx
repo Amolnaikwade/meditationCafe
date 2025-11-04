@@ -1,33 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "./TestimonialSection.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-// ✅ Import images from assets folder
 import user1 from "../assets/cutomer.png";
 import user3 from "../assets/customer2.png";
 
 const testimonials = [
   {
     id: 1,
-    name: "Shanu, Booking.com",
+    name: "Shanu",
+    role: "Booking.com",
     image: user1,
     feedback:
-      "It’s been about two months since I started practicing with Rupam. It definitely takes time to overcome the flow of thoughts, but his simple relaxation techniques help the mind quiet down effortlessly. I feel much calmer and more emotionally balanced now.",
+      "Practicing with Rupam has completely transformed my mornings. His methods are simple, calming, and truly help clear the mind. I feel lighter and more peaceful each day.",
   },
   {
     id: 2,
-    name: "Priyanka, Publicis Sapient",
+    name: "Priyanka",
+    role: "Publicis Sapient",
     image: user3,
     feedback:
-      "I had been meditating on and off for years before joining Meditation Cafe. It’s a decision I truly cherish. Just 20 minutes of regular practice twice a day has brought a wholesome, positive change in my life. Thank you!",
+      "Meditation Cafe gave me a space to breathe and reflect. Just 20 minutes a day helps me stay grounded and positive — it’s truly life-changing.",
   },
 ];
 
-// ✅ Custom arrow components
 const NextArrow = ({ onClick }) => (
   <div className="arrow next" onClick={onClick}>
     <FaArrowRight />
@@ -41,14 +40,6 @@ const PrevArrow = ({ onClick }) => (
 );
 
 const TestimonialSection = () => {
-  const [expandedId, setExpandedId] = useState(null);
-
-  const handleCardClick = (id) => {
-    if (window.innerWidth <= 768) {
-      setExpandedId(expandedId === id ? null : id);
-    }
-  };
-
   const settings = {
     dots: true,
     infinite: true,
@@ -68,16 +59,11 @@ const TestimonialSection = () => {
 
       <Slider {...settings} className="testimonial-slider">
         {testimonials.map((t) => (
-          <div
-            className={`testimonial-card ${
-              expandedId === t.id ? "expanded" : ""
-            }`}
-            key={t.id}
-            onClick={() => handleCardClick(t.id)}
-          >
+          <div className="testimonial-card" key={t.id}>
             <img src={t.image} alt={t.name} className="testimonial-image" />
             <h3 className="testimonial-name">{t.name}</h3>
-            <p className="testimonial-feedback">"{t.feedback}"</p>
+            <p className="testimonial-role">{t.role}</p>
+            <p className="testimonial-feedback">{t.feedback}</p>
           </div>
         ))}
       </Slider>

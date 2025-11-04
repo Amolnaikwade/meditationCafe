@@ -23,8 +23,8 @@
 /* Grid Layout */
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* increased min width */
+  gap: 35px;
   justify-items: center;
 }
 
@@ -33,7 +33,7 @@
   background-color: rgba(245, 240, 229, 1);
   border-radius: 1rem;
   overflow: hidden;
-  width: 320px;
+  width: 360px; /* increased from 320px */
   padding-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -43,14 +43,15 @@
   transform: translateY(-8px);
 }
 
-/* ✅ Image: Fit completely without cropping */
+/* ✅ Image: Wider & fits without cropping */
 .benefit-img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain; /* shows full image */
-  background-color: #f8f6f0; /* soft background to fill empty space */
-  padding: 10px; /* adds breathing room for square images */
+  width: 110%; /* makes the image area slightly wider */
+  height: 240px; /* slightly taller for proportion */
+  object-fit: contain;
+  background-color: #f8f6f0;
+  padding: 8px;
   border-bottom: 2px solid #e2d4b7;
+  margin-left: -5%; /* centers the 110% width image nicely */
 }
 
 /* Title & Text */
@@ -78,7 +79,12 @@
   }
 
   .benefit-card {
-    width: 300px;
+    width: 340px;
+  }
+
+  .benefit-img {
+    width: 108%;
+    height: 220px;
   }
 }
 
@@ -89,7 +95,7 @@
   }
 
   .benefits-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
   }
 
@@ -106,6 +112,7 @@
   }
 
   .benefit-img {
+    width: 105%;
     height: 200px;
   }
 }
@@ -143,6 +150,7 @@
   }
 
   .benefit-img {
+    width: 104%;
     height: 180px;
   }
 }
@@ -163,6 +171,7 @@
   }
 
   .benefit-img {
+    width: 102%;
     height: 160px;
     padding: 8px;
   }
@@ -193,6 +202,7 @@
   }
 
   .benefit-img {
+    width: 100%;
     height: 140px;
     padding: 6px;
   }

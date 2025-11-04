@@ -56,11 +56,15 @@ const HeroSection = () => {
 
 
 
-        {/* 🌈 Stripe Image */}
-        <div className="stripe-wrapper">
-          <img src={stripe} alt="Stripe Design" className="stripe-image" />
-        </div>
-      </div>
+        {/* 🌈 Stripe Rectangle */}
+<div className="stripe-bar">
+  <span>Health</span>
+  <span>Meditate</span>
+  <span>Advance Pranayam</span>
+  <span>Yoga</span>
+  <span>Wellness</span>
+</div>
+</div>
 
       {/* 🧘‍♀️ Right Side Yoga Image */}
       <div className="hero-image-container">

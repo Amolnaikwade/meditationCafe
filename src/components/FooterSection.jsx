@@ -1,8 +1,6 @@
 import React from "react";
 import "./FooterSection.css";
 import {
-  FaFacebookF,
-  FaTwitter,
   FaYoutube,
   FaInstagram,
   FaPhoneAlt,
@@ -12,25 +10,27 @@ import logo from "../assets/logo.png"; // adjust path if needed
 
 export default function FooterSection() {
   return (
-   <footer className="footer">
-  <div className="footer-top">
-    <div className="footer-logo">
-      <a 
-        href="https://www.meditationcafe.in" 
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <img src={logo} alt="PureMind Logo" className="footer-logo-img" />
-      </a>
-    </div>
-  </div>
+    <footer className="footer">
+      {/* 🔹 Logo Section */}
+      <div className="footer-top">
+        <div className="footer-logo">
+          <a
+            href="https://www.meditationcafe.in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={logo} alt="Meditation Cafe Logo" className="footer-logo-img" />
+          </a>
+        </div>
+      </div>
 
       <hr className="divider" />
 
+      {/* 🔹 Middle Section */}
       <div className="footer-middle">
+        {/* Instagram */}
         <div className="footer-column">
           <div className="footer-socials">
-            {/* ✅ Instagram Icon */}
             <a
               href="https://www.instagram.com/meditation_cafe_in?igsh=MjNybXNla285NG12"
               target="_blank"
@@ -42,19 +42,19 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <div className="footer-column">
+        {/* Contact */}
+        <div className="footer-column contact">
           <h3>Contact</h3>
           <p>
             <FaPhoneAlt /> +91 7497870552
           </p>
           <p>
-            <FaEnvelope /> hello@yoga.mail.com
+            <FaEnvelope /> digitalarena2099@gmail.com
           </p>
         </div>
 
-        {/* ✅ Replaced Newsletter section with YouTube link */}
+        {/* YouTube */}
         <div className="footer-column">
-          
           <div className="footer-socials">
             <a
               href="https://www.youtube.com/@meditation_cafe"
@@ -70,8 +70,9 @@ export default function FooterSection() {
 
       <hr className="divider" />
 
+      {/* 🔹 Bottom Section */}
       <div className="footer-bottom">
-        <p>Copyright © 2024 Meditation Cafe. All Rights Reserve</p>
+        <p>© 2024 Meditation Cafe. All Rights Reserved</p>
         <div className="footer-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms Of Use</a>
