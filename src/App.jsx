@@ -9,7 +9,7 @@ import InstructorGallery from "./components/InstructorGallery";
 import SubscriptionPlans from "./components/SubscriptionPlans";
 import TestimonialSection from "./components/TestimonialSection";
 import FooterSection from "./components/FooterSection";
-import PhotoPage from "./components/PhotoPage";
+
 import Navbar from "./components/Navbar";
 //import BlogSection from "./components/BlogSection";
 function App() {
@@ -38,7 +38,7 @@ function App() {
           />
 
           {/* Photo Gallery Page */}
-          <Route path="/photos" element={<PhotoPage />} />
+          
         </Routes>
       </div>
     </Router>

@@ -1,6 +1,5 @@
 import React from "react";
 import "./FeaturesSection.css";
-import { FaWallet, FaMapMarkerAlt, FaCertificate } from "react-icons/fa";
 
 const features = [
   {

@@ -4,12 +4,10 @@ import "./InstructorGallery.css";
 
 import yoga1 from "../assets/yogaclass1.jpg";
 import yoga2 from "../assets/yogaclass2.jpg";
-import yoga3 from "../assets/yogaclass3.jpg";
-import yoga4 from "../assets/yogaclass4.jpg";
 import yoga5 from "../assets/yogaclass5.jpg";
 
 export default function InstructorGallery() {
-  const images = [yoga1, yoga2, yoga3, yoga4, yoga5];
+  const images = [yoga1, yoga2, yoga5];
 
   const settings = {
     dots: true,

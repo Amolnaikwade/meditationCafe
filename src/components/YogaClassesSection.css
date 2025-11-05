@@ -34,23 +34,25 @@
 .yoga-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 9px; /* ❌ Removed vertical gap */
   justify-items: center;
   align-items: start;
 }
 
 /* Card Styles */
 .yoga-card {
- 
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
   max-width: 420px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* ✅ Added shadow */
+  background-color: #fffaf3;
 }
 
 .yoga-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* ✅ Stronger shadow on hover */
 }
 
 /* Default Image Area */
@@ -65,20 +67,19 @@
   aspect-ratio: 4 / 3;
 }
 
-/* 🧘‍♀️ Adjusted for first two cards (reduced height without cropping) */
+/* Adjusted Image Ratios */
 .card1 .yoga-img {
   background-image: url("/vinyasa.jpg");
-  aspect-ratio: 11/ 7.9; /* shorter but full image visible */
+  aspect-ratio: 5.21 / 2.9;
   background-size: contain;
 }
 
 .card2 .yoga-img {
   background-image: url("/ashtanga.jpg");
-  aspect-ratio: 4 / 2.4; /* shorter but full image visible */
+  aspect-ratio: 4.9 / 2.8;
   background-size: contain;
 }
 
-/* Remaining cards (normal) */
 .card3 .yoga-img {
   background-image: url("/power.jpg");
   aspect-ratio: 16 / 9;
@@ -99,18 +100,12 @@
   font-size: 16px;
 }
 
-/* Stagger Effect */
-.card1 {
-  transform: translateY(5px);
-}
-.card2 {
-  transform: translateY(-10px);
-}
-.card3 {
-  transform: translateY(-5px);
-}
+/* Removed stagger effect for consistent alignment */
+.card1,
+.card2,
+.card3,
 .card4 {
-  transform: translateY(8px);
+  transform: none;
 }
 
 /* -------------------- RESPONSIVE DESIGN -------------------- */
