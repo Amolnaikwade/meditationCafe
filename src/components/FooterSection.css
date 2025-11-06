@@ -1,176 +1,145 @@
 .footer {
   background-color: #9a5825;
   color: #f5e8d0;
-  padding: 60px 80px 20px;
   font-family: "Poppins", sans-serif;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.footer-logo-img {
-  width: 160px;
-  height: auto;
-  border-radius: 15px;
-  border: 2px solid #f9c74f;
-  background-color: #fff;
-  padding: 5px;
-}
-
-/* Divider Line */
-.divider {
-  border: 0;
-  border-top: 1px solid #b67a4e;
-  margin: 25px 0;
-}
-
-/* Middle Section */
-.footer-middle {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
   text-align: center;
+  padding: 25px 20px;
 }
 
-.footer-column {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-column h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
+/* --- Line 1: Logo --- */
+.footer-top {
   margin-bottom: 10px;
 }
 
-.footer-column p {
-  font-size: 15px;
-  color: #f3e6d5;
-  margin: 5px 0;
+.footer-logo-img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #f9c74f;
+  background-color: #fff;
+  padding: 4px;
 }
 
-/* Social Icons */
-.footer-socials {
+/* --- Line 2: Social + Contact --- */
+.footer-inline {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
-  font-size: 22px;
-  margin-top: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.footer-socials svg {
+.social-link svg {
   background: #f3e6d5;
   color: #9a5825;
   border-radius: 50%;
-  padding: 8px;
-  cursor: pointer;
+  padding: 6px;
+  font-size: 18px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.footer-socials svg:hover {
+.social-link svg:hover {
   background: #f9c74f;
   transform: scale(1.1);
 }
 
-/* Bottom Section */
+.contact-inline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #f3e6d5;
+  font-size: 14px;
+}
+
+/* --- Line 3: Bottom Text --- */
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-  font-size: 14px;
-  margin-top: 25px;
+  gap: 6px;
+  font-size: 13px;
   color: #f3e6d5;
 }
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .footer-links a {
   color: #f3e6d5;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 13px;
 }
 
 .footer-links a:hover {
   color: #f9c74f;
 }
 
-/* ✅ Responsive Design */
-@media (max-width: 1024px) {
-  .footer {
-    padding: 50px 40px;
-  }
-  .footer-middle {
-    gap: 30px;
-  }
-}
-
+/* ✅ Responsive */
 @media (max-width: 768px) {
   .footer {
-    padding: 40px 25px;
-  }
-
-  .footer-middle {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-column {
-    width: 100%;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .footer-links {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
 
   .footer-logo-img {
     width: 120px;
   }
 
-  .footer-column h3 {
-    font-size: 16px;
-  }
-
-  .footer-column p {
-    font-size: 14px;
-  }
-
-  .footer-socials svg {
-    font-size: 18px;
-    padding: 6px;
-  }
-
-  .footer-bottom p {
+  .footer-inline {
+    gap: 10px;
     font-size: 13px;
+  }
+
+  .contact-inline {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
   }
 
   .footer-links a {
-    font-size: 13px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 18px 10px;
+  }
+
+  .footer-logo-img {
+    width: 100px;
+  }
+
+  .footer-inline {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .social-link svg {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .contact-inline {
+    font-size: 11px;
+  }
+
+  .footer-bottom {
+    gap: 4px;
+  }
+
+  .footer-links {
+    gap: 8px;
+  }
+
+  .footer-links a {
+    font-size: 11px;
   }
 }

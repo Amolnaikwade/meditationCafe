@@ -6,71 +6,51 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from "react-icons/fa";
-import logo from "../assets/logo.png"; // adjust path if needed
+import logo from "../assets/logo.png";
 
 export default function FooterSection() {
   return (
     <footer className="footer">
-      {/* 🔹 Logo Section */}
+      {/* 🔹 Line 1: Logo */}
       <div className="footer-top">
-        <div className="footer-logo">
+        <a
+          href="https://www.meditationcafe.in"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={logo} alt="Meditation Cafe Logo" className="footer-logo-img" />
+        </a>
+      </div>
+
+      {/* 🔹 Line 2: Icons + Contact */}
+      <div className="footer-middle">
+        <div className="footer-inline">
           <a
-            href="https://www.meditationcafe.in"
+            href="https://www.instagram.com/meditation_cafe_in?igsh=MjNybXNla285NG12"
             target="_blank"
             rel="noopener noreferrer"
+            className="social-link"
           >
-            <img src={logo} alt="Meditation Cafe Logo" className="footer-logo-img" />
+            <FaInstagram />
           </a>
-        </div>
-      </div>
-
-      <hr className="divider" />
-
-      {/* 🔹 Middle Section */}
-      <div className="footer-middle">
-        {/* Instagram */}
-        <div className="footer-column">
-          <div className="footer-socials">
-            <a
-              href="https://www.instagram.com/meditation_cafe_in?igsh=MjNybXNla285NG12"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaInstagram />
-            </a>
-          </div>
-        </div>
-
-        {/* Contact */}
-        <div className="footer-column contact">
-          <h3>Contact</h3>
-          <p>
+          <a
+            href="https://www.youtube.com/@meditation_cafe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <FaYoutube />
+          </a>
+          <span className="contact-inline">
             <FaPhoneAlt /> +91 7497870552
-          </p>
-          <p>
+          </span>
+          <span className="contact-inline">
             <FaEnvelope /> digitalarena2099@gmail.com
-          </p>
-        </div>
-
-        {/* YouTube */}
-        <div className="footer-column">
-          <div className="footer-socials">
-            <a
-              href="https://www.youtube.com/@meditation_cafe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaYoutube />
-            </a>
-          </div>
+          </span>
         </div>
       </div>
 
-      <hr className="divider" />
-
-      {/* 🔹 Bottom Section */}
+      {/* 🔹 Line 3: Bottom */}
       <div className="footer-bottom">
         <p>© 2024 Meditation Cafe. All Rights Reserved</p>
         <div className="footer-links">

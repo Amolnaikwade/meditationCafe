@@ -11,7 +11,7 @@ const HeroSection = () => {
   // ✅ Function to handle WhatsApp redirection
   const handleJoinClick = () => {
     const whatsappLink =
-      "https://wa.me/917838560552?text=Hi!%20I%20want%20to%20join%20the%20upcoming%20free%20session."; // replace with your number
+      "https://wa.me/917497870552?text=Hi!%20I%20want%20to%20join%20the%20upcoming%20free%20session."; // replace with your number
     window.open(whatsappLink, "_blank"); // opens in new tab
   };
 

@@ -1,11 +1,10 @@
 .testimonial-section {
   background: linear-gradient(135deg, #fffaf3, #fff);
-  padding: 100px 20px;
+  padding: 60px 20px; /* ⬇️ Reduced from 100px to 60px */
   text-align: center;
   font-family: "Poppins", sans-serif;
   position: relative;
-  overflow-x: hidden; /* ✅ Prevent side text clipping */
-  overflow-y: visible;
+  overflow: hidden; /* ✅ Removed scrolling effect (no x or y scroll) */
 }
 
 /* Floating background shapes */
@@ -13,21 +12,21 @@
 .testimonial-section::after {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 300px; /* ⬇️ Slightly reduced for smaller section */
+  height: 300px;
   background: radial-gradient(circle, #ffe8b3 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
 }
 
 .testimonial-section::before {
-  top: -100px;
-  left: -100px;
+  top: -80px;
+  left: -80px;
 }
 
 .testimonial-section::after {
-  bottom: -150px;
-  right: -100px;
+  bottom: -100px;
+  right: -80px;
 }
 
 /* Label */
@@ -46,89 +45,76 @@
 
 /* Heading */
 .testimonial-heading {
-  font-size: 36px;
+  font-size: 32px; /* ⬇️ Slightly reduced */
   font-weight: 700;
   color: #222;
-  margin-bottom: 60px;
+  margin-bottom: 40px; /* ⬇️ Reduced from 60px */
   position: relative;
   z-index: 2;
 }
 
 /* Slick wrapper */
 .testimonial-slider {
-  max-width: 1000px;
+  max-width: 900px; /* ⬇️ Slightly reduced for balance */
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  overflow: visible; /* ✅ Make sure cards show full text */
+  overflow: visible;
 }
 
 /* ✨ Fancy Card */
 .testimonial-card {
   background: white;
-  border-radius: 25px;
-  padding: 60px 30px 40px;
+  border-radius: 20px; /* ⬇️ Reduced slightly */
+  padding: 40px 25px; /* ⬇️ Reduced padding */
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   text-align: center;
   border: 1px solid #f3e1b6;
-  box-shadow: 0 15px 35px rgba(210, 154, 67, 0.15);
-  transition: all 0.5s ease;
+  box-shadow: 0 10px 25px rgba(210, 154, 67, 0.15);
+  transition: all 0.4s ease;
   position: relative;
-  overflow: visible; /* ✅ Fix hidden content */
-  margin: 0 15px; /* ✅ Proper spacing between slides */
+  overflow: visible;
+  margin: 0 15px;
   box-sizing: border-box;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 45px rgba(210, 154, 67, 0.25);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 35px rgba(210, 154, 67, 0.25);
 }
 
-/* Glowing ring avatar */
+/* Avatar */
 .testimonial-image {
-  width: 120px;
-  height: 120px;
+  width: 100px; /* ⬇️ Reduced from 120px */
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   border: 3px solid #fff;
-  box-shadow: 0 0 0 5px #f7d78e, 0 0 15px rgba(210, 154, 67, 0.5);
-  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 0 4px #f7d78e, 0 0 10px rgba(210, 154, 67, 0.5);
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
+/* Name & Role */
 .testimonial-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #1a1a1a;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .testimonial-role {
-  font-size: 15px;
+  font-size: 14px;
   color: #b47c26;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-/* ✅ Separated Feedback Section */
+/* Feedback */
 .testimonial-feedback {
-  font-size: 15px;
+  font-size: 14px;
   color: #555;
-  line-height: 1.8;
+  line-height: 1.7;
   font-style: italic;
   max-width: 85%;
   margin: 0 auto;
@@ -138,14 +124,14 @@
   white-space: normal;
 }
 
-/* Decorative quotes */
+/* Quotes */
 .testimonial-feedback::before,
 .testimonial-feedback::after {
   content: '"';
   color: #d29a43;
-  font-size: 40px;
+  font-size: 36px;
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.15;
 }
 
 .testimonial-feedback::before {
@@ -158,7 +144,7 @@
   bottom: -20px;
 }
 
-/* Navigation arrows */
+/* Arrows */
 .arrow {
   position: absolute;
   top: 50%;
@@ -166,8 +152,8 @@
   z-index: 10;
   background: #d29a43;
   color: #fff;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -182,35 +168,29 @@
 }
 
 .arrow.prev {
-  left: -70px;
+  left: -60px;
 }
 
 .arrow.next {
-  right: -70px;
+  right: -60px;
 }
 
 /* Dots */
 .slick-dots li button:before {
   color: #d29a43 !important;
-  font-size: 10px;
+  font-size: 9px;
 }
 
-/* ✅ Responsive Design */
+/* Responsive */
 @media (max-width: 900px) {
   .testimonial-heading {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .testimonial-card {
-    padding: 40px 20px;
+    padding: 30px 20px;
     margin: 0 auto;
     width: 90%;
-  }
-
-  .testimonial-feedback {
-    font-size: 14px;
-    max-width: 100%;
-    padding: 0 10px;
   }
 
   .arrow {
@@ -225,10 +205,10 @@
   }
 
   .testimonial-name {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .testimonial-role {
-    font-size: 14px;
+    font-size: 13px;
   }
 }

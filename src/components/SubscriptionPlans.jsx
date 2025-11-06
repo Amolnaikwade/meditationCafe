@@ -27,7 +27,7 @@ export default function SubscriptionPlans() {
           <button
       className="purchase-btn"
       onClick={() => {
-        const whatsappNumber = "917838560552"; // ✅ your WhatsApp number (no + or spaces)
+        const whatsappNumber = "917497870552"; // ✅ your WhatsApp number (no + or spaces)
         const message = "I want to join 3 day upcoming free session.";
         const encodedMessage = encodeURIComponent(message);
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -58,7 +58,7 @@ export default function SubscriptionPlans() {
           <button
     className="purchase-btn active"
     onClick={() => {
-      const whatsappNumber = "917838560552"; // ✅ Replace with your WhatsApp number (no '+' or spaces)
+      const whatsappNumber = "917497870552"; // ✅ Replace with your WhatsApp number (no '+' or spaces)
       const message = "Hi! I want to purchase the Rs 1500 'साधना · The Practice' course.";
       const encodedMessage = encodeURIComponent(message);
       const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
